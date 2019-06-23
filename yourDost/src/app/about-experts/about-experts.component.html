@@ -1,3 +1,70 @@
-<p>
-  about-experts works!
-</p>
+<hr />
+<div class="container">
+  <div class="row">
+    <div class="jumbotron">
+      <h1 class="blue" style="color:#2196F3;">Material Design Like Cards </h1>
+      <h3 class="blue">With Headers</h3>
+
+    </div>
+  </div>
+</div>
+  <!-- Team -->
+  <section id="team" class="pb-5">
+    <div class="container">
+      <h5 class="section-title h1">Our Experts</h5>
+      <div class="row">
+        <!-- Team member -->
+        <div class="col-xs-12 col-sm-6 col-md-4" *ngFor="let Expert of experts">
+          <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+            <div class="mainflip">
+              <div class="frontside">
+                <div class="card">
+                  <div class="card-body text-center">
+                    <p><img class=" img-fluid" src="{{ Expert.imagePath }}" alt="{{ Expert.name }}"></p>
+                    <h4 class="card-title">{{ Expert.name }}</h4>
+                    <p class="card-text">{{ Expert.description }}</p>
+                  </div>
+                </div>
+              </div>
+              <div class="backside">
+                <div class="card">
+                  <div class="card-body text-center mt-4">
+                    <h4 class="card-title">Available On</h4>
+                    <p class="card-text">{{ Expert.timeTable }}</p>
+                    <p class="card-text">{{ Expert.about}}</p>
+                    <ul class="list-inline">
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank" href="#">
+                          <i class="fa fa-facebook"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank" href="#">
+                          <i class="fa fa-twitter"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank" href="#">
+                          <i class="fa fa-skype"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank" href="#">
+                          <i class="fa fa-google"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="card-footer list-inline">
+                    <button type="button" class="btn pmd-btn-flat pmd-ripple-effect btn-primary list-inline-item"> Chat </button>
+
+                    <button class="btn pmd-btn-flat pmd-ripple-effect btn-dark list-inline-item" type="button">Appointment</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
